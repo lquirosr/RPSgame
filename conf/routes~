@@ -10,7 +10,7 @@ GET        /people                                 People.index
 POST       /people                                 People.create
 DELETE     /people/{id}                            People.delete
 GET        /test                                   Algorit.aux
-
+POST       /Texts.uploadTextFile                   Instructions.uploadTextFile
 
 # Ignore favicon requests
 GET        /favicon.ico                            404
