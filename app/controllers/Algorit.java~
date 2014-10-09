@@ -57,7 +57,7 @@ public String readFile(String filename)throws Exception{
         while ((inputLine = in.readLine()) != null)
             content = content + inputLine; //System.out.println(inputLine);
         in.close();
-
+	}
 
 /*
 	java.io.File yourFile = new java.io.File(filename);

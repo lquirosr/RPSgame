@@ -58,6 +58,9 @@ public String readFile(String filename)throws Exception{
             content = content + inputLine; //System.out.println(inputLine);
         in.close();
 	}
+	 catch(Exception exc) {
+            System.out.println(exc.getMessage());
+        }
 
 /*
 	java.io.File yourFile = new java.io.File(filename);
