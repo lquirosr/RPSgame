@@ -46,12 +46,16 @@ public String readFile(String filename)
 {
    String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
-   VirtualFile vf = VirtualFile.fromRelativePath(filename);
-   File realFile = vf.getRealFile();
+	
+// etc.
    try {
-       FileReader reader = new FileReader(realFile);
-       char[] chars = new char[(int) file.length()];
-       reader.read(chars);
+	java.io.File yourFile = new java.io.File("/path/app/menus/menu1.yml");
+	java.io.FileReader fr = new java.io.FileReader(yourFile);
+       //FileReader reader = new FileReader(realFile);
+       //char[] chars = new char[(int) file.length()];
+       char[] chars = new char[(int) yourfile.length()];
+       fr.read(chars);
+       //reader.read(chars);
        content = new String(chars);
        reader.close();
    } catch (IOException e) {
