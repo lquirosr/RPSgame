@@ -24,7 +24,7 @@ import java.util.regex.Matcher;
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.io.*; 
-
+import java.net.*;
 
 public class Algorit extends Controller {
 	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
