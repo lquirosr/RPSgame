@@ -44,8 +44,8 @@ public class Algorit extends Controller {
 //leo el archivo  
 public String readFile(String filename)
 {
-   /*String content = null;
-   File file = new File(filename);
+   String content = null;
+   File file = Play.classloader.getResourceAsStream("public/"+filename);// new File(filename);
    try {
        FileReader reader = new FileReader(file);
        char[] chars = new char[(int) file.length()];
@@ -54,9 +54,9 @@ public String readFile(String filename)
        reader.close();
    } catch (IOException e) {
        e.printStackTrace();
-   }*/
-   return (String) Play.classloader.getResourceAsStream("public/"+filename);
-   //return content;
+   }
+   //return (String) 
+   return content;
 }
 
     //ALGORITMO DEl PROBLEMA A

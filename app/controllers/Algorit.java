@@ -45,7 +45,7 @@ public class Algorit extends Controller {
 public String readFile(String filename)
 {
    String content = null;
-   File file = Play.classloader.getResourceAsStream("public/"+filename);// new File(filename);
+   File file = Play.resource("public/"+filename);// new File(filename);
    try {
        FileReader reader = new FileReader(file);
        char[] chars = new char[(int) file.length()];
