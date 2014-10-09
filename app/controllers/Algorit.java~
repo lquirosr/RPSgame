@@ -1,4 +1,12 @@
+/*
+Esta clase contiene los metodos necesarios para solucionar el juego
+Los problemas A y B
 
+Luis Quirós Rojas
+lquirosr@gmail.com
+9/10/2014
+
+*/
 //Play Framework
 package controllers;
 import models.Person;
