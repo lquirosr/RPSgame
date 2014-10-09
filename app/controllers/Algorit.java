@@ -57,7 +57,7 @@ public String readFile(String filename)
    } catch (IOException e) {
        e.printStackTrace();
    }*/
-   return File.toString(new File(filename), Charsets.UTF_8); //(String) 
+   return File.toString(new File(filename)); //(String) 
    //return content;
 }
 
