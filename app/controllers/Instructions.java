@@ -17,7 +17,7 @@ public class Instructions extends Controller{
 	public static void uploadTextFile(String title, File textFile) {
 		try {		
 		System.out.println("archivo completo: " + FileUtils.readLines(textFile));
-		
+		index();
 		}
 		catch (IOException e) {
 		       e.printStackTrace();
