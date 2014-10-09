@@ -11,16 +11,16 @@ import org.apache.commons.io.FileUtils;
 
 public class Instructions extends Controller{
 
-    public static void index()  throws Exception {
+    public static void index()  {
         render();
     }	
-	public static void uploadTextFile(String title, File textFile) {
+	public static void uploadTextFile(String title, File textFile) throws Exception {
 		try {		
 		System.out.println("archivo completo: " + FileUtils.readLines(textFile));
-		index();
 		}
 		catch (IOException e) {
 		       e.printStackTrace();
 	   	}
+	index();
 	}	
 }
