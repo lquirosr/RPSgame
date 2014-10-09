@@ -27,18 +27,9 @@ import java.io.*;
 import java.net.*;
 
 public class Algorit extends Controller {
-	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
+	
 	public void Algorit() {
-        //Introduzco la tabla de resultados posibles en una tabla de hash, 0 -> gana el primero 1 ->gana el segundo
-	match_map.put("SS", 0);
-	match_map.put("SR", 1);
-	match_map.put("SP", 0);
-	match_map.put("RR", 0);
-	match_map.put("RS", 0);
-	match_map.put("RP", 1);
-	match_map.put("PP", 0);
-	match_map.put("PS", 1);
-	match_map.put("PR", 0);
+
    }
 
 //leo el archivo  
@@ -69,6 +60,19 @@ public String readFile(String filename)
     //ALGORITMO DEl PROBLEMA A
     public String solve_game(String game){
     //a.1
+        //Introduzco la tabla de resultados posibles en una tabla de hash, 0 -> gana el primero 1 ->gana el segundo
+
+	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
+	match_map.put("SS", 0);
+	match_map.put("SR", 1);
+	match_map.put("SP", 0);
+	match_map.put("RR", 0);
+	match_map.put("RS", 0);
+	match_map.put("RP", 1);
+	match_map.put("PP", 0);
+	match_map.put("PS", 1);
+	match_map.put("PR", 0);
+
 	game = game.replaceAll("\\s+","");
 	System.out.println("trimmed down game: " + game);
     try {
