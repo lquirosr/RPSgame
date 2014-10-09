@@ -9,9 +9,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
-public class Instructions extends Controller throws Exception{
+public class Instructions extends Controller{
 
-    public static void index() {
+    public static void index()  throws Exception {
         render();
     }	
 	public static void uploadTextFile(String title, File textFile) {
