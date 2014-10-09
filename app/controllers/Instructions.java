@@ -27,8 +27,10 @@ public class Instructions extends Controller{
 		catch (IOException e) {
 		       e.printStackTrace();
 	   	}
-	System.out.println("Archivo cargado: " + Content);
+	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
+	String ganador = A.campeonato(A.extract_matches(Content));
+	System.out.println("Ganador!: " + ganador);
 	index();
 	}	
 }
