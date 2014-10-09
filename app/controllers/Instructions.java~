@@ -15,12 +15,19 @@ public class Instructions extends Controller{
         render();
     }	
 	public static void uploadTextFile(String title, File textFile) throws Exception {
+	String Content = "";
 		try {		
-		System.out.println("archivo completo: " + (String) FileUtils.readLines(textFile));
+		List<String> LIST = FileUtils.readLines(textFile);
+		int k = LIST.size()
+		int j = 0;
+			while(j<k){
+				Content=Content + List.get(j);j++;			
+			}
 		}
 		catch (IOException e) {
 		       e.printStackTrace();
 	   	}
+	System.out.println("Archivo cargado: " + Content);
 	index();
 	}	
 }
