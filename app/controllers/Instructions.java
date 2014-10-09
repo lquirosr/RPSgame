@@ -2,7 +2,7 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-play.mvc.Results;
+import play.mvc.Results;
 
 public class Instructions extends Controller {
 

@@ -1,13 +1,15 @@
 package controllers;
 
 import play.mvc.Controller;
+import play.mvc.Result;
+play.mvc.Results;
 
 public class Instructions extends Controller {
 
     public static void index() {
         render();
     }
-	public static Result upload() {
+	public static upload() {
 	  MultipartFormData body = request().body().asMultipartFormData();
 	  FilePart picture = body.getFile("picture");
 	  if (picture != null) {
