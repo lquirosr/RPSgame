@@ -49,11 +49,11 @@ public String readFile(String filename)
 	
 // etc.
    try {
-	java.io.File yourFile = new java.io.File("/path/app/menus/menu1.yml");
+	java.io.File yourFile = new java.io.File(filename);
 	java.io.FileReader fr = new java.io.FileReader(yourFile);
        //FileReader reader = new FileReader(realFile);
        //char[] chars = new char[(int) file.length()];
-       char[] chars = new char[(int) yourfile.length()];
+       char[] chars = new char[(int) yourFile.length()];
        fr.read(chars);
        //reader.read(chars);
        content = new String(chars);
