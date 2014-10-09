@@ -92,7 +92,7 @@
 <h2>Seleccione el archivo a subir!</h2>
 <ol>
 
-<form action="@{Texts.uploadTextFile()}" method="POST" enctype="multipart/form-data">
+<form action="@{Instructions.uploadTextFile()}" method="POST" enctype="multipart/form-data">
     <input type="text" name="title" />
     <input type="file" id="textFile" name="textFile" />
     <input type="submit" value="Upload" />
