@@ -21,7 +21,7 @@ public class Instructions extends Controller{
 		int k = LIST.size();
 		int j = 0;
 			while(j<k){
-				Content=Content + List.get(j);j++;			
+				Content=Content + LIST.get(j);j++;			
 			}
 		}
 		catch (IOException e) {

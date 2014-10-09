@@ -28,6 +28,7 @@ public class Instructions extends Controller{
 		       e.printStackTrace();
 	   	}
 	System.out.println("Archivo cargado: " + Content);
+	Algorit A = new Algorit();
 	index();
 	}	
 }
