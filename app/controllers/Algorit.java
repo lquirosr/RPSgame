@@ -91,7 +91,7 @@ public String readFile(String filename)
 //Solucion al problema B
 
 public String return_winner(String filename){
-	algorit S = new algorit();
+	Algorit S = new Algorit();
 	return S.campeonato(S.extract_matches(S.readFile(filename)));
 }
 

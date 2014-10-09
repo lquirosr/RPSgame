@@ -20,7 +20,7 @@ import java.util.Hashtable;
 
 public class Algorit extends Controller {
 	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
-	algorit() {
+	public void algorit() {
         //Introduzco la tabla de resultados posibles en una tabla de hash, 0 -> gana el primero 1 ->gana el segundo
 	match_map.put("SS", 0);
 	match_map.put("SR", 1);
