@@ -20,7 +20,7 @@ import java.util.Hashtable;
 
 public class Algorit extends Controller {
 	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
-	public void algorit() {
+	public void Algorit() {
         //Introduzco la tabla de resultados posibles en una tabla de hash, 0 -> gana el primero 1 ->gana el segundo
 	match_map.put("SS", 0);
 	match_map.put("SR", 1);
@@ -149,7 +149,7 @@ public String campeonato(List<String> champ){
 	//System.out.println("el torneo tendrá: " + final_size + " competencias!");
 
 /// Iteración y sobre la lista, esta va a crecer en tanto se van realizando los encuentros, se itera hasta final_size
-	algorit AL = new algorit();
+	Algorit AL = new Algorit();
 	int k = 0;
 	while ( k < final_size-1) {
 		//Cada nuevo nuevo encuentro resultado del ganador de dos juegos consecutivos en la tabla de partidas "champ"
