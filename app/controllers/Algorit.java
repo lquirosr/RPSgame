@@ -186,7 +186,15 @@ public String campeonato(List<String> champ){
 	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
 	//System.out.println(java.io.File.path());
 	
-	
-    }
+	//
+	InputStream in = new URL( "https://dl.dropboxusercontent.com/u/6822814/champ.txt" ).openStream();
+
+	 try {
+	   System.out.println( IOUtils.toString( in ) );
+	 } finally {
+	   IOUtils.closeQuietly(in);
+	 }
+
+	    }
 
 }
