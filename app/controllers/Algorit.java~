@@ -81,7 +81,7 @@ public String readFile(String filename)
 	else{/*System.out.println("all fine");*/}
         }
     catch(Exception exc) {
-            /*System.out.println(exc.getMessage()*/);
+            /*System.out.println(exc.getMessage())*/;
         }
    //a.2
    try {
