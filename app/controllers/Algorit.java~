@@ -212,4 +212,16 @@ public String campeonato(List<String> champ){
 	System.out.println("ganador del campeonato!: " + ganador);
 	render(ganador);
 	}
+
+	public static void uploadTextFile(String title, File textFile) throws Exception {
+		try {		
+		System.out.println("archivo completo: " + FileUtils.readLines(textFile));
+		}
+		catch (IOException e) {
+		       e.printStackTrace();
+	   	}
+	index();
+	}
+
+
 }
