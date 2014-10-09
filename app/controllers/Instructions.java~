@@ -31,6 +31,8 @@ public class Instructions extends Controller{
 	Algorit A = new Algorit();
 	String ganador = A.campeonato(A.extract_matches(Content));
 	System.out.println("Ganador!: " + ganador);
-	index();
+	Client client = Client.findById(id);
+        renderArgs.put("ganador", ganador);	
+	render();
 	}	
 }
