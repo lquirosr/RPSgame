@@ -25,7 +25,6 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.io.*; 
 import java.net.*;
-import org.apache.commons.io.FileUtils;
 
 public class Algorit extends Controller {
 	
@@ -214,15 +213,6 @@ public String campeonato(List<String> champ){
 	render(ganador);
 	}
 
-	public static void uploadTextFile(String title, File textFile) throws Exception {
-		try {		
-		System.out.println("archivo completo: " + FileUtils.readLines(textFile));
-		}
-		catch (IOException e) {
-		       e.printStackTrace();
-	   	}
-	index();
-	}
 
 
 }

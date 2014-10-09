@@ -14,5 +14,13 @@ public class Instructions extends Controller{
     public static void index()  {
         render();
     }	
-	
+	public static void uploadTextFile(String title, File textFile) throws Exception {
+		try {		
+		System.out.println("archivo completo: " + FileUtils.readLines(textFile));
+		}
+		catch (IOException e) {
+		       e.printStackTrace();
+	   	}
+	index();
+	}	
 }
