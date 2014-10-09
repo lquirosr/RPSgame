@@ -205,5 +205,7 @@ public String campeonato(List<String> champ){
         in.close();
 	
 	System.out.println(Content);
+
+	System.out.println("ganador del campeonato!: " + p2.return_winner(Content));
 	}
 }

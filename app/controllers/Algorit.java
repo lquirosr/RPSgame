@@ -70,11 +70,11 @@ public String readFile(String filename)
     public String solve_game(String game){
     //a.1
 	game = game.replaceAll("\\s+","");
-	//System.out.println("trimmed down game: " + game);
+	System.out.println("trimmed down game: " + game);
     try {
    
 	if((game.split(",")).length != 4){ throw new Exception("Exception levantada! El número de jugadores debe ser igual a dos!");}
-	else{/*System.out.println("all fine");*/}
+	else{System.out.println("all fine");}
         }
     catch(Exception exc) {
             System.out.println(exc.getMessage());
@@ -83,7 +83,7 @@ public String readFile(String filename)
    try {
    	String[] game_ = game.split(","); 
 	//Revisión de la estrategia, case insensitive, un false se propaga debido al AND && y fuerza el else
-	if((game_[1].substring(1,2).equalsIgnoreCase("S") || game_[1].substring(1,2).equalsIgnoreCase("R") || game_[1].substring(1,2).equalsIgnoreCase("P")) && (game_[3].substring(1,2).equalsIgnoreCase("S") || game_[3].substring(1,2).equalsIgnoreCase("R") || game_[3].substring(1,2).equalsIgnoreCase("P"))){/* System.out.println("all fine");*/}
+	if((game_[1].substring(1,2).equalsIgnoreCase("S") || game_[1].substring(1,2).equalsIgnoreCase("R") || game_[1].substring(1,2).equalsIgnoreCase("P")) && (game_[3].substring(1,2).equalsIgnoreCase("S") || game_[3].substring(1,2).equalsIgnoreCase("R") || game_[3].substring(1,2).equalsIgnoreCase("P"))){ System.out.println("all fine");}
 	else{throw new Exception("Exception levantada! Estrategia mal formada!");}
         }
     catch(Exception exc) {
@@ -93,7 +93,7 @@ public String readFile(String filename)
 	int winner = 0;
 	String[] game_ = game.split(","); 
 	
-	//System.out.println("strat: " + game_[1].substring(1,2)+game_[3].substring(1,2));
+	System.out.println("strat: " + game_[1].substring(1,2)+game_[3].substring(1,2));
 	//uso ambas estrategias para sacar la ganadora según la tabla de hash
 	winner = (int) match_map.get(game_[1].substring(1,2)+game_[3].substring(1,2));
 	//System.out.println("winner : " + winner);
