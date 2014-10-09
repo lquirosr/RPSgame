@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.Arrays;
 import java.util.Hashtable;
-
+import java.io.*; 
 
 
 public class Algorit extends Controller {
