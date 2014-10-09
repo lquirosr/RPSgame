@@ -180,7 +180,7 @@ public String campeonato(List<String> champ){
 	return AL.solve_game(champ.get(final_size-1));
 }
 
-        public static void aux() {
+        public static void aux() throws Exception {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
 	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));

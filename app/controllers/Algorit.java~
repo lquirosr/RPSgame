@@ -196,5 +196,5 @@ public String campeonato(List<String> champ){
         while ((inputLine = in.readLine()) != null)
             System.out.println(inputLine);
         in.close();
-
+	}
 }
