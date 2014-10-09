@@ -44,7 +44,7 @@ public class Algorit extends Controller {
 //leo el archivo  
 public String readFile(String filename)
 {
-  /* String content = null;
+   String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
    VirtualFile vf = VirtualFile.fromRelativePath(filename);
    File realFile = vf.getRealFile();
@@ -56,9 +56,9 @@ public String readFile(String filename)
        reader.close();
    } catch (IOException e) {
        e.printStackTrace();
-   }*/
-   return File.toString(new File(filename)); //(String) 
-   //return content;
+   }
+   //return File.toString(new File(filename)); //(String) 
+   return content;
 }
 
     //ALGORITMO DEl PROBLEMA A
@@ -178,7 +178,7 @@ public String campeonato(List<String> champ){
         public static void aux() {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
-	System.out.println("ganador del campeonato!: " + p2.return_winner("/conf/public/champ.txt"));
+	System.out.println("ganador del campeonato!: " + p2.return_winner("public/champ.txt"));
     }
 
 }
