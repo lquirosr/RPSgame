@@ -43,7 +43,7 @@ public class Algorit extends Controller {
 
 //leo el archivo  
 public String readFile(String filename)throws Exception{
-   String content = null;
+ //  String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
 	
 // etc.
