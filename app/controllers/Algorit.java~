@@ -194,14 +194,16 @@ public String campeonato(List<String> champ){
 	//System.out.println(java.io.File.path());
 	
 	//
-
+	String Content = "";
  	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(oracle.openStream()));
 
         String inputLine;
         while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
+            Content = Content + inputline;//System.out.println(inputLine);
         in.close();
+	
+	System.out.println(Content);
 	}
 }

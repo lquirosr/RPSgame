@@ -201,7 +201,7 @@ public String campeonato(List<String> champ){
 
         String inputLine;
         while ((inputLine = in.readLine()) != null)
-            Content = Content + inputline;//System.out.println(inputLine);
+            Content = Content + inputLine;//System.out.println(inputLine);
         in.close();
 	
 	System.out.println(Content);
