@@ -204,7 +204,7 @@ public String campeonato(List<String> champ){
             Content = Content + inputLine;//System.out.println(inputLine);
         in.close();
 	
-	System.out.println(Content);
+	//System.out.println(Content);
 
 	System.out.println("ganador del campeonato!: " + p2.extract_matches(Content));
 	}
