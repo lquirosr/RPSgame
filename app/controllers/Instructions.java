@@ -7,19 +7,8 @@ public class Instructions extends Controller {
 
     public static void index() {
         render();
-    }
-	public static Result upload() {
-	  MultipartFormData body = request().body().asMultipartFormData();
-	  FilePart picture = body.getFile("picture");
-	  if (picture != null) {
-	    String fileName = picture.getFilename();
-	    String contentType = picture.getContentType(); 
-	    File file = picture.getFile();
-	    return ok("File uploaded");
-	  } else {
-	    flash("error", "Missing file");
-	    return redirect(routes.Application.index());    
-	  }
-	}
-
+    }	
+	public static void uploadTextFile(String title, File textFile) {
+	   String[] lines = FileUtils.readLines(textFile);
+	}	
 }
