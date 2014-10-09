@@ -25,6 +25,7 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.io.*; 
 import java.net.*;
+import org.apache.commons.compress.utils.IOUtils;
 
 public class Algorit extends Controller {
 	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
