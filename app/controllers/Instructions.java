@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
-public class Instructions extends Controller {
+public class Instructions extends Controller throws Exception{
 
     public static void index() {
         render();
