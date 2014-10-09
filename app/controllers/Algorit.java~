@@ -44,7 +44,7 @@ public class Algorit extends Controller {
 //leo el archivo  
 public String readFile(String filename)
 {
-   String content = null;
+  /* String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
    VirtualFile vf = VirtualFile.fromRelativePath(filename);
    File realFile = vf.getRealFile();
@@ -56,9 +56,9 @@ public String readFile(String filename)
        reader.close();
    } catch (IOException e) {
        e.printStackTrace();
-   }
-   //return (String) 
-   return content;
+   }*/
+   return String content = Files.toString(new File(filename), Charsets.UTF_8); //(String) 
+   //return content;
 }
 
     //ALGORITMO DEl PROBLEMA A
