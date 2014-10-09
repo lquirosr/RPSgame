@@ -43,12 +43,12 @@ public class Algorit extends Controller {
 
 //leo el archivo  
 public String readFile(String filename)throws Exception{
- //  String content = null;
+   String content = "";
 //   File file = Play.resource("public/"+filename);// new File(filename);
 	
 // etc.
    try {
-	String content = "";
+	//String content = "";
 	URL oracle = new URL(filename);
         BufferedReader in = new BufferedReader(
         new InputStreamReader(oracle.openStream()));

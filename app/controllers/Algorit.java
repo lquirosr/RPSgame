@@ -42,7 +42,7 @@ public class Algorit extends Controller {
    }
 
 //leo el archivo  
-public String readFile(String filename)throws Exception{
+public String readFile(String filename){
    String content = "";
 //   File file = Play.resource("public/"+filename);// new File(filename);
 	
