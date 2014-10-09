@@ -74,7 +74,7 @@
     Esta aplicación utiliza el framework play.
     Permite el registro de juegadores en base a campeonatos que pueden ser cargados.
     Acá se puede ver el historial de campeonatos <a href="/people"> Ranking </a>.
-    Then use Eclipse or the Command Line to deploy some changes.
+    Utilize las partidas precargadas o el seleccionador de archivos para subir un nuevo campeonato.
 </div>
 
 <ul id="tab" class="nav nav-tabs">
