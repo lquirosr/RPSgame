@@ -210,6 +210,6 @@ public String campeonato(List<String> champ){
 	//System.out.println(Content);
 	String ganador = p2.campeonato(p2.extract_matches(Content));
 	System.out.println("ganador del campeonato!: " + ganador);
-	render(ganador);
+	//render(ganador);
 	}
 }
