@@ -81,7 +81,7 @@ public String readFile(String filename)
 	else{/*System.out.println("all fine");*/}
         }
     catch(Exception exc) {
-            System.out.println(exc.getMessage());
+            /*System.out.println(exc.getMessage()*/);
         }
    //a.2
    try {
@@ -91,7 +91,7 @@ public String readFile(String filename)
 	else{throw new Exception("Exception levantada! Estrategia mal formada!");}
         }
     catch(Exception exc) {
-            System.out.println(exc.getMessage());
+            /*System.out.println(exc.getMessage())*/;
         }
    //a.3
 	int winner = 0;
@@ -172,8 +172,8 @@ public String campeonato(List<String> champ){
 		k=k+2;
 	}
 	int n = 0;	
-	System.out.println("Campeonato completo! : ");
-	while (n < final_size){System.out.println(champ.get(n));n++;}
+	//System.out.println("Campeonato completo! : ");
+	while (n < final_size){/*System.out.println(champ.get(n));*/n++;}
 	//System.out.println("Campeonato completo! : " + champ);
 	//solucionando el último juego de la tabla se obtiene el ganador del torneo!
 	return AL.solve_game(champ.get(final_size-1));
@@ -202,7 +202,6 @@ public String campeonato(List<String> champ){
  	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(oracle.openStream()));
-
         String inputLine;
         while ((inputLine = in.readLine()) != null)
             Content = Content + inputLine;//System.out.println(inputLine);
