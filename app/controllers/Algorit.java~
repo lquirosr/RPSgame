@@ -183,7 +183,7 @@ public String campeonato(List<String> champ){
         public static void aux() {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
-	System.out.println("ganador del campeonato!: " + p2.return_winner("champ.txt"));
+	System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
     }
 
 }
