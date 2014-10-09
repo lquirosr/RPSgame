@@ -9,8 +9,6 @@ GET     /                                          Instructions.index
 GET        /people                                 People.index
 POST       /people                                 People.create
 DELETE     /people/{id}                            People.delete
-GET        /test                                   People.aux
-
 
 # Ignore favicon requests
 GET        /favicon.ico                            404
