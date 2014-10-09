@@ -63,10 +63,10 @@
 
 <div class="row">
 <div class="span8 offset2">
-<h1 class="alert alert-success">Aplicación: campeonatos de RPS!</h1>
+<h1 class="alert alert-success">Your app is ready!</h1>
 
 <div class="page-header">
-    <h1>Lets start!</h1>
+    <h1>Get started with the Play Framework</h1>
 </div>
 
 <div style="margin-bottom: 20px">
