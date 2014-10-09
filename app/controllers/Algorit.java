@@ -42,13 +42,24 @@ public class Algorit extends Controller {
    }
 
 //leo el archivo  
-public String readFile(String filename)
-{
+public String readFile(String filename)throws Exception{
    String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
 	
 // etc.
    try {
+	String content = "";
+	URL oracle = new URL(filename);
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            content = content + inputLine; //System.out.println(inputLine);
+        in.close();
+
+
+/*
 	java.io.File yourFile = new java.io.File(filename);
 	java.io.FileReader fr = new java.io.FileReader(yourFile);
        //FileReader reader = new FileReader(realFile);
@@ -62,7 +73,7 @@ public String readFile(String filename)
    } catch (IOException e) {
        e.printStackTrace();
    }
-   //return File.toString(new File(filename)); //(String) 
+   //return File.toString(new File(filename)); //(String) */
    return content;
 }
 
@@ -180,21 +191,14 @@ public String campeonato(List<String> champ){
 	return AL.solve_game(champ.get(final_size-1));
 }
 
-        public static void aux() throws Exception {
+        public static void aux()  {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
-	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
+	System.out.println("ganador del campeonato!: " + p2.return_winner("https://dl.dropboxusercontent.com/u/6822814/champ.txt"));
 	//System.out.println(java.io.File.path());
 	
 	//
-
- 	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
-
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
-        in.close();
+	//"https://dl.dropboxusercontent.com/u/6822814/champ.txt"
+ 	
 	}
 }
