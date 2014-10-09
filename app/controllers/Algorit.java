@@ -57,7 +57,8 @@ public String readFile(String filename)
        fr.read(chars);
        //reader.read(chars);
        content = new String(chars);
-       reader.close();
+       //reader.close();
+       fr.close();
    } catch (IOException e) {
        e.printStackTrace();
    }
