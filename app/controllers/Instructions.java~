@@ -18,7 +18,7 @@ public class Instructions extends Controller{
 	String Content = "";
 		try {		
 		List<String> LIST = FileUtils.readLines(textFile);
-		int k = LIST.size()
+		int k = LIST.size();
 		int j = 0;
 			while(j<k){
 				Content=Content + List.get(j);j++;			
