@@ -25,7 +25,6 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.io.*; 
 import java.net.*;
-import org.apache.commons.compress.utils.IOUtils;
 
 public class Algorit extends Controller {
 	Hashtable<String,Integer> match_map = new Hashtable<String,Integer>();
@@ -188,14 +187,14 @@ public String campeonato(List<String> champ){
 	//System.out.println(java.io.File.path());
 	
 	//
-	InputStream in = new URL( "https://dl.dropboxusercontent.com/u/6822814/champ.txt" ).openStream();
 
-	 try {
-	   System.out.println( IOUtils.toString( in ) );
-	 } finally {
-	   IOUtils.closeQuietly(in);
-	 }
+ 	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
 
-	    }
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            System.out.println(inputLine);
+        in.close();
 
 }
