@@ -42,27 +42,13 @@ public class Algorit extends Controller {
    }
 
 //leo el archivo  
-public String readFile(String filename){
-   String content = "";
+public String readFile(String filename)
+{
+   String content = null;
 //   File file = Play.resource("public/"+filename);// new File(filename);
 	
 // etc.
    try {
-	//String content = "";
-	URL oracle = new URL(filename);
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
-
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            content = content + inputLine; //System.out.println(inputLine);
-        in.close();
-	}
-	 catch(Exception exc) {
-            System.out.println(exc.getMessage());
-        }
-
-/*
 	java.io.File yourFile = new java.io.File(filename);
 	java.io.FileReader fr = new java.io.FileReader(yourFile);
        //FileReader reader = new FileReader(realFile);
@@ -76,7 +62,7 @@ public String readFile(String filename){
    } catch (IOException e) {
        e.printStackTrace();
    }
-   //return File.toString(new File(filename)); //(String) */
+   //return File.toString(new File(filename)); //(String) 
    return content;
 }
 
@@ -118,12 +104,7 @@ public String readFile(String filename){
    return result;
    }
 
-//Solucion al problema B
 
-public String return_winner(String filename){
-	Algorit S = new Algorit();
-	return S.campeonato(S.extract_matches(S.readFile(filename)));
-}
 
 public List<String> extract_matches(String tournament){
 	List<String> match_list = new ArrayList<String>();
@@ -194,14 +175,33 @@ public String campeonato(List<String> champ){
 	return AL.solve_game(champ.get(final_size-1));
 }
 
-        public static void aux()  {
+
+//Solucion al problema B
+
+	//public String return_winner(String filename){
+	//Algorit S = new Algorit();
+	//return S.campeonato(S.extract_matches(S.readFile(filename)));
+	//}
+	
+	public String return_winner(String file){
+	Algorit S = new Algorit();
+	return S.campeonato(S.extract_matches(file));
+	}
+        public static void aux() throws Exception {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
-	System.out.println("ganador del campeonato!: " + p2.return_winner("https://dl.dropboxusercontent.com/u/6822814/champ.txt"));
+	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
 	//System.out.println(java.io.File.path());
 	
 	//
-	//"https://dl.dropboxusercontent.com/u/6822814/champ.txt"
- 	
+
+ 	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            System.out.println(inputLine);
+        in.close();
 	}
 }

@@ -104,12 +104,7 @@ public String readFile(String filename)
    return result;
    }
 
-//Solucion al problema B
 
-public String return_winner(String filename){
-	Algorit S = new Algorit();
-	return S.campeonato(S.extract_matches(S.readFile(filename)));
-}
 
 public List<String> extract_matches(String tournament){
 	List<String> match_list = new ArrayList<String>();
@@ -180,6 +175,18 @@ public String campeonato(List<String> champ){
 	return AL.solve_game(champ.get(final_size-1));
 }
 
+
+//Solucion al problema B
+
+	//public String return_winner(String filename){
+	//Algorit S = new Algorit();
+	//return S.campeonato(S.extract_matches(S.readFile(filename)));
+	//}
+	
+	public String return_winner(String file){
+	Algorit S = new Algorit();
+	return S.campeonato(S.extract_matches(file));
+	}
         public static void aux() throws Exception {
 	System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
@@ -187,14 +194,16 @@ public String campeonato(List<String> champ){
 	//System.out.println(java.io.File.path());
 	
 	//
-
+	String Content = "";
  	URL oracle = new URL("https://dl.dropboxusercontent.com/u/6822814/champ.txt");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(oracle.openStream()));
 
         String inputLine;
         while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
+            Content = Content + inputline;//System.out.println(inputLine);
         in.close();
+	
+	System.out.println(Content);
 	}
 }
