@@ -59,7 +59,7 @@ public class Instructions extends Controller{
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
 	String win = A.campeonato(A.extract_matches(Content));	
-
+	win = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
 	ganador =  "El ganador es: " + win;
 
 	//System.out.println("conteo: " + Person.count("firstname = ?", win));	
