@@ -273,7 +273,7 @@ public String campeonato(List<String> champ){
 		for(Person p : people) {
 		    Container = Container + p.firstName + ", ";
 		}
-		resultado_juego_api1 = container.substring(1,container.length()-2) + "]";
+		resultado_juego_api1 = Container.substring(1,Container.length()-2) + "]";
 	}
 	public static void juego_api1(){
 		String Container = "[";
@@ -281,7 +281,7 @@ public String campeonato(List<String> champ){
 		for(Person p : people) {
 		    Container = Container + p.firstName + ", ";
 		}
-		resultado_juego_api1 = container.substring(1,container.length()-2) + "]";
+		resultado_juego_api1 = Container.substring(1,Container.length()-2) + "]";
 	}
 	//Metodo que implementa el punto 3 del API
 	static String resultado_juego_api = "";
