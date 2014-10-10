@@ -238,10 +238,49 @@ public String campeonato(List<String> champ){
 
 	
 	/*Puntos opcionales API */
-
 	
-
-	//Programación de la especificación 3 del API
+	//Metodo que implementa el punto 2 del API
+	static String resultado_juego_api0 = "";
+	//juego_api0
+	//resultado_juego_api0
+	public static void juego_api0(String first, String second){
+	System.out.println("first: " + first + "second" + second);
+		
+	String win=first.substring(first.indexOf("=")+1,first.length());
+	resultado_juego_api0 = "success";
+	if(People.find_name(win)==true){
+		List<Person> p = Person.find("firstname", win).fetch();
+		p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
+		p.get(0).save();
+		System.out.println("registro repetido");
+		}
+	else{	
+		System.out.println("registro nuevo!");
+		Person person = new Person();
+		person.firstName = win;//win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
+		person.lastName = "3";
+		person.create();
+		}
+	renderArgs.put("resultado_juego_api0", resultado_juego_api0);	
+	render();
+	}
+	//Metodos que implementan el punto 2 del API
+	//juego_api1
+	static String resultado_juego_api1 = "";
+	public static void juego_api1(String count){
+		String Container = "[";
+		List<Person> people = Person.find("order by lastName desc").fetch(count);//el opcional
+		for(Person p : people) {
+		    Container = Container + p.firstName + ", ";
+		}
+		container = container.substring(1,container.length()-2) + "]";
+		resultado_juego_api1 = container;
+	}
+	public static void juego_api1(){
+		String Container = "[";
+		List<Person> people = Person.find("order by lastName desc").fetch(10);//default
+	}
+	//Metodo que implementa el punto 3 del API
 	static String resultado_juego_api = "";
 	public static void juego_api(String game){
 	Algorit S = new Algorit();
@@ -266,27 +305,5 @@ public String campeonato(List<String> champ){
         render();
 	}
 
-	static String resultado_juego_api0 = "";
-	//juego_api0
-	//resultado_juego_api0
-	public static void juego_api0(String first, String second){
-	System.out.println("first: " + first + "second" + second);	
-	String win=first.substring(win.indexOf("=")+1,win.length());
-	resultado_juego_api0 = "success";
-	if(People.find_name(win)==true){
-		List<Person> p = Person.find("firstname", win).fetch();
-		p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
-		p.get(0).save();
-		System.out.println("registro repetido");
-		}
-	else{	
-		System.out.println("registro nuevo!");
-		Person person = new Person();
-		person.firstName = win;//win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
-		person.lastName = "3";
-		person.create();
-		}
-	renderArgs.put("resultado_juego_api0", resultado_juego_api0);	
-	render();
-	}
+	
 }
