@@ -76,8 +76,11 @@
     Acá se puede ver el historial de campeonatos <a href="/people"> Ranking </a>.
     Utilize las partidas precargadas o el seleccionador de archivos para subir un nuevo campeonato.
 
-
-    Eliminar registro Partidas de la base de datos <td><button class="btn btn-danger btn-mini" action="@{People.delete_all()}" onclick="People.delete_all();">Delete</button></td>
+    <p>
+    Eliminar registro Partidas de la base de datos <form action="@{People.delete_all()}" method="POST" enctype="multipart/form-data">
+    <input type="submit" value="Borrar regsitros!" />
+    <p>
+</form>
 
 </div>
 
