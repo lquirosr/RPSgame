@@ -12,11 +12,19 @@ import models.Person;
 
 public class Instructions extends Controller{
     static String ganador = "";
+    static String ganador2 = "";
     public void Instructions(){ganador="";}
     public static void index()  {
 	renderArgs.put("ganador", ganador);
+	renderArgs.put("ganador2", ganador2);	
         render();
     }	
+	public static void load_game(String URL_d){
+	String win = campeonato_ulr(String URL_s);
+	ganador2 =  "El ganador es: " + win;
+	System.out.println("Ganador en partida cargada!: " + win);	
+	index();
+	}
 	public static void uploadTextFile(String title, File textFile) throws Exception {
 	String Content = "";
 		try {		
