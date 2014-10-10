@@ -27,8 +27,8 @@ public class People extends Controller {
     }
     public static boolean find_name(String Name){
 	boolean v = false;    	
-	if(Person.count("firstname = ?", Name)>0){v = true;}
-	else {v = false;}
+	if(Person.count("firstname = ?", Name)==0){v = false;}
+	else {v = true;}
 	return v;
     }
         public static void aux() {
