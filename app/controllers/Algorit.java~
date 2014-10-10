@@ -269,6 +269,7 @@ public String campeonato(List<String> champ){
 	static String resultado_juego_api1 = "";
 	public static void juego_api1(String count){
 		String Container = "[";
+		system.out.println("int : "+ Integer.parseInt(count.substring(count.indexOf("=")+1 , count.length())));
 		List<Person> people = Person.find("order by lastName desc").fetch(Integer.parseInt(count.substring(count.indexOf("=")+1 , count.length())));//el opcional
 		for(Person p : people) {
 		    Container = Container + p.firstName + ", ";
