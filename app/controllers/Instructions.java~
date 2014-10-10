@@ -36,7 +36,7 @@ public class Instructions extends Controller{
 
 	ganador =  "El ganador es: " + win;
 
-	System.out.println("conteo: " + Person.count("firstname = ?", Name)));	
+	System.out.println("conteo: " + Person.count("firstname = ?", Name));	
 	if(People.find_name(win)==true){
 	System.out.println("registro repetido");
 	}
