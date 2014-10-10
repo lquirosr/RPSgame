@@ -247,8 +247,9 @@ public String campeonato(List<String> champ){
 	Algorit S = new Algorit();
 	String win = "";
 	resultado_juego_api = S.solve_game(game);
-	win = resultado_juego_api;	
-	if(People.find_name(win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2))==true){
+	win = resultado_juego_api;
+	win = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);	
+	if(People.find_name(win)==true){
 		List<Person> p = Person.find("firstname", win).fetch();
 		p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
 		p.get(0).save();
@@ -257,7 +258,7 @@ public String campeonato(List<String> champ){
 	else{	
 		System.out.println("registro nuevo!");
 		Person person = new Person();
-		person.firstName = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
+		person.firstName = win;//win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
 		person.lastName = "3";
 		person.create();
 		}	
