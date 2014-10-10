@@ -236,8 +236,12 @@ public String campeonato(List<String> champ){
 	}
 
 
+	
+	/*Puntos opcionales API */
 
-	/*API */
+	
+
+	//Programación de la especificación 3 del API
 	static String resultado_juego_api = "";
 	public static void juego_api(String game){
 	Algorit S = new Algorit();
