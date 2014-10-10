@@ -25,4 +25,10 @@ public class People extends Controller {
         Person person = Person.findById(id);
         person.delete();
     }
+        public static void aux() {
+	System.out.println("prueba exitosa!");
+    }
+
+
+
 }
