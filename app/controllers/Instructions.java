@@ -38,9 +38,9 @@ public class Instructions extends Controller{
 
 	//System.out.println("conteo: " + Person.count("firstname = ?", win));	
 	if(People.find_name(win)==true){
-	Person p = Person.find("firstname", win).get(0);
-	p.lastName = ""+(Integer.parseInt(p.lastName) + 3);
-	p.save();
+	List<Person> p = Person.find("firstname", win);
+	p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
+	p.get(0).save();
 	System.out.println("registro repetido");
 	}
 	else{	
