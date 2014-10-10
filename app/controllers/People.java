@@ -24,6 +24,7 @@ public class People extends Controller {
     public static void delete(Long id) {
         Person person = Person.findById(id);
         person.delete();
+
     }
 
     public static void delete_all(){
@@ -31,6 +32,7 @@ public class People extends Controller {
 	for(Person p : to_go) {
 	    p.delete();
 	}
+	index();
     }
     public static boolean find_name(String Name){
 	boolean v = false;    	
