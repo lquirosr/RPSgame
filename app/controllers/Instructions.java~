@@ -17,7 +17,6 @@ public class Instructions extends Controller{
 	renderArgs.put("ganador", ganador);
         render();
     }	
-    public String getganador(){return ganador;}
 	public static void uploadTextFile(String title, File textFile) throws Exception {
 	String Content = "";
 		try {		
@@ -34,6 +33,7 @@ public class Instructions extends Controller{
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
 	String win = A.campeonato(A.extract_matches(Content));	
+
 	ganador =  "El ganador es: " + win;	
 	Person person = new Person();
         person.firstName = win;

@@ -35,10 +35,16 @@ public class Instructions extends Controller{
 	String win = A.campeonato(A.extract_matches(Content));	
 
 	ganador =  "El ganador es: " + win;	
+	if(find_name(win)==true){
+	System.out.println("registro repetido");
+	}
+	else{	
+	System.out.println("registro nuevo!");
 	Person person = new Person();
         person.firstName = win;
         person.lastName = "3";
         person.create();
+	}
 	System.out.println("Ganador!: " + ganador);	
 	index();
 	}	
