@@ -25,6 +25,13 @@ public class People extends Controller {
         Person person = Person.findById(id);
         person.delete();
     }
+
+    public static void delete_all(){
+    	List<Person> to_go = Person.findAll(); // type inference works here!
+	for(Person p : to_go) {
+	    p.delete();
+	}
+    }
     public static boolean find_name(String Name){
 	boolean v = false;    	
 	if(Person.count("firstname = ?", Name)==0){v = false;}
