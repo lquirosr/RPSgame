@@ -3,7 +3,7 @@
 
 Luis Quirós Rojas
 Se selección el lenguaje JAVA para la implementación: Es un lenguaje que manejo y me gusta.
-Se seleccionó el framework PLAY por ser de rápido desarrollo y ya lo había probado antes.
+Se seleccionó el framework PLAY por ser de rápido desarrollo y ya lo había probado antes. El framework configura la base de datos y algunos apesctos básicos de la aplicación.
 Se seleccionó hostearlo en heroku pues lo he usado muchas veces y soporta JAVA
 
 
@@ -36,8 +36,10 @@ El sistema cuenta con un botón para limpiar la base de datos.
 
 El sistema cuenta con un link para ver el ranking de los mejores 10 jugadores, permite eliminar cualquiera del ranking, tiene un boton para ello.
 
-La clase Algorit implementa la solución a los algoritmos propuestos, y se detalla su locación en comentarios.
+La clase Algorit implementa la solución a los algoritmos propuestos (partes A & B), y se detalla su locación en comentarios.
 
+Base de datos, conexión jdbc con una db postgresql localizada en:
+postgresql://ec2-54-83-9-127.compute-1.amazonaws.com:5432/d9g1702ellkffs
 
 API (Commands 1 & 3)
 
