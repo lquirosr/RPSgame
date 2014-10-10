@@ -23,8 +23,8 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a href="/" class="brand">Luis Quirós Rojas: RPS game</a>
-            <a href="/" class="brand" id="heroku">by <strong>heroku</strong></a>
+            <a href="/" class="brand">INICIO: RPS game</a>
+            <a href="/" class="brand" id="heroku">by <strong>Luis Quirós Rojas</strong></a>
         </div>
     </div>
 </div>
