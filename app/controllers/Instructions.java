@@ -22,7 +22,21 @@ public class Instructions extends Controller{
 	try {	String win = A.campeonato_ulr(URL_d);
 		ganador =  "El ganador es: " + win;
 		System.out.println("Ganador en partida cargada!: " + win);	
-		}
+	if(People.find_name(win)==true){
+	List<Person> p = Person.find("firstname", win).fetch();
+	p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
+	p.get(0).save();
+	System.out.println("registro repetido");
+	}
+	else{	
+	System.out.println("registro nuevo!");
+	Person person = new Person();
+        person.firstName = win;
+        person.lastName = "3";
+        person.create();
+	}
+	
+	}
 	catch (IOException e) {
 		       e.printStackTrace();
 	   	}

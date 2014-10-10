@@ -12,17 +12,15 @@ import models.Person;
 
 public class Instructions extends Controller{
     static String ganador = "";
-    static String ganador2 = "";
     public void Instructions(){ganador="";}
     public static void index()  {
-	renderArgs.put("ganador", ganador);
-	renderArgs.put("ganador2", ganador2);	
+	renderArgs.put("ganador", ganador);	
         render();
     }	
 	public static void load_game(String URL_d)throws Exception{
 	Algorit A = new Algorit();	
 	try {	String win = A.campeonato_ulr(URL_d);
-		ganador2 =  "El ganador es: " + win;
+		ganador =  "El ganador es: " + win;
 		System.out.println("Ganador en partida cargada!: " + win);	
 		}
 	catch (IOException e) {
