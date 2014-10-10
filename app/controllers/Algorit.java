@@ -272,6 +272,20 @@ public String campeonato(List<String> champ){
 	public static void juego_api0(String first, String second){
 	System.out.println("first: " + first + "second" + second);	
 	resultado_juego_api0 = "success";
+	win=first;
+	if(People.find_name(win)==true){
+		List<Person> p = Person.find("firstname", win).fetch();
+		p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
+		p.get(0).save();
+		System.out.println("registro repetido");
+		}
+	else{	
+		System.out.println("registro nuevo!");
+		Person person = new Person();
+		person.firstName = win;//win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
+		person.lastName = "3";
+		person.create();
+		}
 	renderArgs.put("resultado_juego_api0", resultado_juego_api0);	
 	render();
 	}
