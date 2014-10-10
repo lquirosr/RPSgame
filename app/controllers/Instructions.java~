@@ -34,7 +34,9 @@ public class Instructions extends Controller{
 	Algorit A = new Algorit();
 	String win = A.campeonato(A.extract_matches(Content));	
 
-	ganador =  "El ganador es: " + win;	
+	ganador =  "El ganador es: " + win;
+
+	System.out.println("conteo: " + Person.count("firstname = ?", Name)));	
 	if(People.find_name(win)==true){
 	System.out.println("registro repetido");
 	}
