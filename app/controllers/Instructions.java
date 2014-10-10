@@ -19,13 +19,17 @@ public class Instructions extends Controller{
 	renderArgs.put("ganador2", ganador2);	
         render();
     }	
-	public static void load_game(String URL_d){
+	public static void load_game(String URL_d)throws Exception{
 	Algorit A = new Algorit();	
-	String win = A.campeonato_ulr(URL_d);
-	ganador2 =  "El ganador es: " + win;
-	System.out.println("Ganador en partida cargada!: " + win);	
+	try {	String win = A.campeonato_ulr(URL_d);
+		ganador2 =  "El ganador es: " + win;
+		System.out.println("Ganador en partida cargada!: " + win);	
+		}
+	catch (IOException e) {
+		       e.printStackTrace();
+	   	}
 	index();
-	}
+		}
 	public static void uploadTextFile(String title, File textFile) throws Exception {
 	String Content = "";
 		try {		
