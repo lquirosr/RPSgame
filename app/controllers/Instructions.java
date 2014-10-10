@@ -20,7 +20,8 @@ public class Instructions extends Controller{
         render();
     }	
 	public static void load_game(String URL_d){
-	String win = campeonato_ulr(URL_d);
+	Algorit A = new Algorit();	
+	String win = A.campeonato_ulr(URL_d);
 	ganador2 =  "El ganador es: " + win;
 	System.out.println("Ganador en partida cargada!: " + win);	
 	index();
