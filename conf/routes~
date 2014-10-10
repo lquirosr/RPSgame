@@ -10,8 +10,8 @@ GET        /people                                 People.index
 POST       /people                                 People.create
 DELETE     /people/{id}                            People.delete
 GET        /test                                   Algorit.aux
-POST       /ng/{game}            Algorit.juego_api
-GET        /ng/{game}            Algorit.juego_api
+POST       /api/championship/new/{game}            Algorit.juego_api
+GET        /api/championship/new/{game}            Algorit.juego_api
 # Ignore favicon requests
 GET        /favicon.ico                            404
 

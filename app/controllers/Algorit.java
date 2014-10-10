@@ -266,7 +266,12 @@ public String campeonato(List<String> champ){
         render();
 	}
 
-
-
-
+	static String resultado_juego_api0 = "";
+	//juego_api0
+	//resultado_juego_api0
+	public static void juego_api0(String winner, String looser){
+	resultado_juego_api0 = "success";
+	renderArgs.put("resultado_juego_api", resultado_juego_api0);	
+	render();
+	}
 }
