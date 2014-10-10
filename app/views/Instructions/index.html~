@@ -97,7 +97,7 @@
     <input type="submit" value="Ejecutar campeonato!" />
 </form>
 
-<h1>${Instructions.getganador()}</h1>
+<h1>${ganador}</h1>
 
 </ol>
 
