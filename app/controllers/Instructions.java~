@@ -30,7 +30,7 @@ public class Instructions extends Controller{
 	   	}
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
-	ganador = "El ganador es: " A.campeonato(A.extract_matches(Content));
+	ganador = "El ganador es: " + A.campeonato(A.extract_matches(Content));
 	System.out.println("Ganador!: " + ganador);	
 	index();
 	}	
