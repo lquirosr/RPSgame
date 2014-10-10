@@ -265,6 +265,7 @@ public String campeonato(List<String> champ){
 	render();
 	}
 	//Metodos que implementan el punto 2 del API
+	//Comando de API No operativo
 	//juego_api1
 	static String resultado_juego_api1 = "";
 	public static void juego_api1(String count){
