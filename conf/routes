@@ -13,6 +13,7 @@ GET        /test                                   Algorit.aux
 POST       /api/championship/new/{game}            Algorit.juego_api 	
 GET        /api/championship/new/{game}            Algorit.juego_api
 POST       /api/championship/result?{first}&{second} Algorit.juego_api0
+GET        /api/championship/result?{first}&{second} Algorit.juego_api0
 
 # Ignore favicon requests
 GET        /favicon.ico                            404
