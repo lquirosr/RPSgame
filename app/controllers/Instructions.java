@@ -20,7 +20,7 @@ public class Instructions extends Controller{
         render();
     }	
 	public static void load_game(String URL_d){
-	String win = campeonato_ulr(String URL_s);
+	String win = campeonato_ulr(String URL_d);
 	ganador2 =  "El ganador es: " + win;
 	System.out.println("Ganador en partida cargada!: " + win);	
 	index();
