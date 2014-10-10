@@ -272,7 +272,7 @@ public String campeonato(List<String> champ){
 	public static void juego_api0(String first, String second){
 	System.out.println("first: " + first + "second" + second);	
 	resultado_juego_api0 = "success";
-	renderArgs.put("resultado_juego_api", resultado_juego_api0);	
+	renderArgs.put("resultado_juego_api0", resultado_juego_api0);	
 	render();
 	}
 }
