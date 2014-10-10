@@ -257,7 +257,7 @@ public String campeonato(List<String> champ){
 	else{	
 		System.out.println("registro nuevo!");
 		Person person = new Person();
-		person.firstName = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")-1);
+		person.firstName = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+3);
 		person.lastName = "3";
 		person.create();
 		}	
