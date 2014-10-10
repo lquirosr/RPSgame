@@ -270,8 +270,9 @@ public String campeonato(List<String> champ){
 	//juego_api0
 	//resultado_juego_api0
 	public static void juego_api0(String first, String second){
-	System.out.println("first: " + first + "second" + second);	
-	String win=first.substring(win.indexOf("=")+1,win.length());
+	System.out.println("first: " + first + "second" + second);
+		
+	String win=first.substring(first.indexOf("=")+1,first.length());
 	resultado_juego_api0 = "success";
 	if(People.find_name(win)==true){
 		List<Person> p = Person.find("firstname", win).fetch();
