@@ -17,9 +17,9 @@ GET        /api/championship/new/{game}            Algorit.juego_api
 POST       /api/championship/result/{first}&{second} Algorit.juego_api0
 GET        /api/championship/result/{first}&{second} Algorit.juego_api0
 POST       /api/championship/top/{count}             Algorit.juego_api1
-GET        /api/championship/top/{count}             Algorit.juego_api1
-
-
+GET        /api/championship/top/{count}             Algorit.juego_api
+POST       /api/championship/top                     Algorit.juego_api2
+GET        /api/championship/top                     Algorit.juego_api2
 
 # Ignore favicon requests
 GET        /favicon.ico                            404

@@ -277,13 +277,14 @@ public String campeonato(List<String> champ){
 		resultado_juego_api1 = Container.substring(1,Container.length()-2) + "]";
 		render();
 	}
-	public static void juego_api1(){
+	static String resultado_juego_api2 = "";	
+	public static void juego_api2(){
 		String Container = "[";
 		List<Person> people = Person.find("order by lastName desc").fetch(10);//default
 		for(Person p : people) {
 		    Container = Container + p.firstName + ", ";
 		}
-		resultado_juego_api1 = Container.substring(1,Container.length()-2) + "]";
+		resultado_juego_api2 = Container.substring(1,Container.length()-2) + "]";
 		render();
 	}
 	//Metodo que implementa el punto 3 del API
