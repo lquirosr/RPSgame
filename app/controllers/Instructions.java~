@@ -34,7 +34,10 @@ public class Instructions extends Controller{
 	Algorit A = new Algorit();
 	String win = A.campeonato(A.extract_matches(Content));	
 	ganador =  "El ganador es: " + win;	
-	People.create(win, "3");
+	Person person = new Person();
+        person.firstName = win;
+        person.lastName = "3";
+        person.create();
 	System.out.println("Ganador!: " + ganador);	
 	index();
 	}	
