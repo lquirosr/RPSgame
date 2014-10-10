@@ -40,6 +40,7 @@ public class Instructions extends Controller{
 	if(People.find_name(win)==true){
 	Person p = Person.find("firstname", win).fetch();
 	p.lastName = ""+(Integer.parseInt(p.lastName) + 3);
+	p.save();
 	System.out.println("registro repetido");
 	}
 	else{	
