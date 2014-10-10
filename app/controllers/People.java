@@ -25,7 +25,7 @@ public class People extends Controller {
         Person person = Person.findById(id);
         person.delete();
     }
-    public static boolean find_name(string Name){
+    public static boolean find_name(String Name){
 	boolean v = false;    	
 	if(Person.findby("firstName", name)!=null){v = true;}
 	else {v = false;}
