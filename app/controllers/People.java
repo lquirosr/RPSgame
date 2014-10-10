@@ -27,7 +27,7 @@ public class People extends Controller {
     }
     public static boolean find_name(String Name){
 	boolean v = false;    	
-	if(Person.findby("firstName", name)!=null){v = true;}
+	if(Person.findby("firstName", Name)!=null){v = true;}
 	else {v = false;}
 	return v;
     }
