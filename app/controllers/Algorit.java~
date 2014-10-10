@@ -239,9 +239,11 @@ public String campeonato(List<String> champ){
 
 	/*API */
 	static String resultado_juego_api = "";
-	public void juego_api(String game){
+	public static void juego_api(String game){
 	Algorit S = new Algorit();
+	String win = "";
 	resultado_juego_api = S.solve_game(game);
+	win = resultado_juego_api;	
 	renderArgs.put("resultado_juego_api", resultado_juego_api);	
         render();
 	}
