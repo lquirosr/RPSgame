@@ -238,7 +238,7 @@ public String campeonato(List<String> champ){
 
 
 	/*API */
-	static resultado_juego_api = "";
+	static String resultado_juego_api = "";
 	public void juego_api(String game){
 	Algorit S = new Algorit();
 	resultado_juego_api = S.solve_game(game);
