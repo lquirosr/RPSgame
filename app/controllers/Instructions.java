@@ -10,8 +10,9 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
 public class Instructions extends Controller{
-
+    String ganador = "";
     public static void index()  {
+	renderArgs.put("ganador", ganador);
         render();
     }	
 	public static void uploadTextFile(String title, File textFile) throws Exception {
@@ -29,9 +30,8 @@ public class Instructions extends Controller{
 	   	}
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
-	String ganador = A.campeonato(A.extract_matches(Content));
-	System.out.println("Ganador!: " + ganador);
-        renderArgs.put("ganador", ganador);	
+	ganador = A.campeonato(A.extract_matches(Content));
+	System.out.println("Ganador!: " + ganador);	
 	index();
 	}	
 }
