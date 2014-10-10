@@ -192,7 +192,7 @@ public String campeonato(List<String> champ){
 	return S.campeonato(S.extract_matches(file));
 	}
         public static void aux() throws Exception {
-	System.out.println("prueba en heroku!");
+	//System.out.println("prueba en heroku!");
 	Algorit p2 = new Algorit();
 	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
 	//System.out.println(java.io.File.path());
@@ -212,7 +212,28 @@ public String campeonato(List<String> champ){
 	System.out.println("ganador del campeonato!: " + ganador);
 	render(ganador);
 	}
-
+	public String campeonato_ulr(String URL_s) throws Exception {
+	//System.out.println("prueba en heroku!");
+	Algorit p2 = new Algorit();
+	//System.out.println("ganador del campeonato!: " + p2.return_winner("conf/champ.txt"));
+	//System.out.println(java.io.File.path());
+	
+	//
+	String Content = "";
+ 	URL oracle = new URL(URL_s);
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            Content = Content + inputLine;//System.out.println(inputLine);
+        in.close();
+	
+	//System.out.println(Content);
+	String ganador = p2.campeonato(p2.extract_matches(Content));
+	System.out.println("ganador del campeonato!: " + ganador);
+	//render(ganador);
+	return ganador;
+	}
 
 
 }
