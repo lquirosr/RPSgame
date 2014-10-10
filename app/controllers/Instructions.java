@@ -12,9 +12,10 @@ import models.Person;
 
 public class Instructions extends Controller{
     static String ganador = "";
+    boolean v = false;
     public void Instructions(){ganador="";}
     public static void index()  {
-	renderArgs.put("ganador", ganador);
+	if(v){renderArgs.put("ganador", ganador);}
         render();
     }	
 	public static void uploadTextFile(String title, File textFile) throws Exception {
@@ -33,6 +34,7 @@ public class Instructions extends Controller{
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
 	String win = A.campeonato(A.extract_matches(Content));	
+	v=true;
 	ganador =  "El ganador es: " + win;	
 	Person person = new Person();
         person.firstName = win;
