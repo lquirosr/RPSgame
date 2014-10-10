@@ -10,7 +10,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
 public class Instructions extends Controller{
-    String ganador = "";
+    static String ganador = "";
     public static void index()  {
 	renderArgs.put("ganador", ganador);
         render();
