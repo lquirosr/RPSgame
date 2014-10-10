@@ -108,63 +108,16 @@
 <div id="cli-instructions" class="instructions tab-pane">
     <a name="using-cli"></a>
 
-    <h1>Using Command Line:</h1>
+    <h1>Torneos precargados:</h1>
 
-    <h2>Step 1. Setup your environment</h2>
+    <h2>Seleccione el torneo a ejecutar o descargar</h2>
     <ol>
-        <li>Install the <a href="http://toolbelt.heroku.com">Heroku Toolbelt</a>.</li>
-        <li><a href="http://download.playframework.org/releases/play-1.2.4.zip">Download</a> the Play framework version
-            1.2.4.
-        </li>
-        <li>Unzip the framework and add the directory to your <code>PATH</code>.</li>
+        <li>Torneo 1 <a href="https://dl.dropboxusercontent.com/u/6822814/champ.txt">descargar</a>.</li>
+        <li>Torneo 2 <a href="https://dl.dropboxusercontent.com/u/6822814/champ_2.txt~">descargar</a>.</li>
+        <li>Torneo 3 <a href="https://dl.dropboxusercontent.com/u/6822814/champ_3.txt">descargar</a>.</li>
     </ol>
 
-    <h2>Step 2. Login to Heroku</h2>
-    <code>heroku login</code>
-    <blockquote>
-        Be sure to create, or associate an SSH key with your account.
-    </blockquote>
-            <pre>
-$ heroku login
-Enter your Heroku credentials.
-Email: playful@example.com
-Password:
-Could not find an existing public key.
-Would you like to generate one? [Yn] Y
-Generating new SSH public key.
-Uploading SSH public key /Users/Administrator/.ssh/id_rsa.pub
-Authentication successful.</pre>
 
-    <h2>Step 3. Clone the App</h2>
-    <code>git clone -o heroku git@heroku.com:<script>document.write(appname())</script>.git</code>
-
-    <h2>Step 4. Makes some changes to the app</h2>
-    <ol>
-        <li>Open <code>app/controllers/People.java</code> and locate the <code>index()</code> method.</li>
-        <li>To sort the person records by last name, change
-            <code>Person.findAll()</code> to <code>Person.find("ORDER BY lastName").fetch()</code>
-        </li>
-        <li>Save the file.</li>
-    </ol>
-
-    <h2>Step 5. Make sure the app still compiles</h2>
-    <code>play clean precompile</code>
-
-    <h2>Step 6. Deploy your changes</h2>
-    <ol>
-        <li><code>git commit -am "New changes to deploy"</code></li>
-        <li><code>git push heroku master</code></li>
-    </ol>
-
-    <div class="hero-unit">
-        <h1>Done!</h1>
-
-        <p>You've just cloned, modified, and deployed a brand new app.</p>
-        <a href="/people" class="btn btn-primary btn-large">See your changes</a>
-
-        <p style="margin-top: 20px">Learn more at the
-            <a href="http://devcenter.heroku.com/categories/java">Heroku Dev Center</a></p>
-    </div>
 </div>
 <!-- End CLI tab -->
 </div>

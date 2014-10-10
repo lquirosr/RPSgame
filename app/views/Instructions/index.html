@@ -112,7 +112,10 @@
 
     <h2>Seleccione el torneo a ejecutar o descargar</h2>
     <ol>
-        <li>Torneo 1 <a href="https://dl.dropboxusercontent.com/u/6822814/champ.txt">descargar</a>.</li>
+        <li>Torneo 1  <a href="https://dl.dropboxusercontent.com/u/6822814/champ.txt">descargar</a><form action="@{Instructions.load_game()}" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="URL_d" value="https://dl.dropboxusercontent.com/u/6822814/champ.txt"/>
+    <input type="submit" value="Ejecutar!" />
+</form></li>
         <li>Torneo 2 <a href="https://dl.dropboxusercontent.com/u/6822814/champ_2.txt~">descargar</a>.</li>
         <li>Torneo 3 <a href="https://dl.dropboxusercontent.com/u/6822814/champ_3.txt">descargar</a>.</li>
     </ol>
