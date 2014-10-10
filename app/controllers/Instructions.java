@@ -32,6 +32,6 @@ public class Instructions extends Controller{
 	String ganador = A.campeonato(A.extract_matches(Content));
 	System.out.println("Ganador!: " + ganador);
         renderArgs.put("ganador", ganador);	
-	render();
+	index();
 	}	
 }
