@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 
 public class Instructions extends Controller{
     static String ganador = "";
+    public static void Instructions {ganador="";}
     public static void index()  {
 	renderArgs.put("ganador", ganador);
         render();
