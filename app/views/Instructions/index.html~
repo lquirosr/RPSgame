@@ -75,6 +75,10 @@
     Permite el registro de juegadores en base a campeonatos que pueden ser cargados.
     Acá se puede ver el historial de campeonatos <a href="/people"> Ranking </a>.
     Utilize las partidas precargadas o el seleccionador de archivos para subir un nuevo campeonato.
+
+
+    Eliminar registro Partidas de la base de datos <td><button class="btn btn-danger btn-mini" onclick="People.delete_all();">Delete</button></td>
+
 </div>
 
 <ul id="tab" class="nav nav-tabs">
