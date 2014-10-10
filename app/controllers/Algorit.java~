@@ -241,7 +241,7 @@ public String campeonato(List<String> champ){
 	Static String resultado_juego_api = "";
 	public String juego_api(String game){
 	Algorit S = new Algorit();
-	S.solve_game(game);
+	resultado_juego_api = S.solve_game(game);
 	renderArgs.put("resultado_juego_api", resultado_juego_api);	
         render();
 	}
