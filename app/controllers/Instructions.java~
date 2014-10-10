@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
+import models.Person;
 
 public class Instructions extends Controller{
     static String ganador = "";
@@ -31,7 +32,9 @@ public class Instructions extends Controller{
 	   	}
 	//System.out.println("Archivo cargado: " + Content);
 	Algorit A = new Algorit();
-	ganador = "El ganador es: " + A.campeonato(A.extract_matches(Content));
+	String win = A.campeonato(A.extract_matches(Content));	
+	ganador =  "El ganador es: " + win;	
+	People.create(win, "3");
 	System.out.println("Ganador!: " + ganador);	
 	index();
 	}	
