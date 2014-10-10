@@ -272,7 +272,7 @@ public String campeonato(List<String> champ){
 	public static void juego_api0(String first, String second){
 	System.out.println("first: " + first + "second" + second);	
 	resultado_juego_api0 = "success";
-	win=first;
+	String win=first;
 	if(People.find_name(win)==true){
 		List<Person> p = Person.find("firstname", win).fetch();
 		p.get(0).lastName = ""+(Integer.parseInt(p.get(0).lastName) + 3);
