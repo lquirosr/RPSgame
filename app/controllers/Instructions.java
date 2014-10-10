@@ -20,6 +20,7 @@ public class Instructions extends Controller{
 	public static void load_game(String URL_d)throws Exception{
 	Algorit A = new Algorit();	
 	try {	String win = A.campeonato_ulr(URL_d);
+		win = win.substring(win.indexOf("\"")+1,(win.substring(win.indexOf("\"")+1, win.length())).indexOf("\"")+2);
 		ganador =  "El ganador es: " + win;
 		System.out.println("Ganador en partida cargada!: " + win);	
 	if(People.find_name(win)==true){
