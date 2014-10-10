@@ -275,6 +275,7 @@ public String campeonato(List<String> champ){
 		    Container = Container + p.firstName + ", ";
 		}
 		resultado_juego_api1 = Container.substring(1,Container.length()-2) + "]";
+		renderArgs.put("resultado_juego_api1", resultado_juego_api1);
 		render();
 	}
 	static String resultado_juego_api2 = "";	
@@ -285,6 +286,7 @@ public String campeonato(List<String> champ){
 		    Container = Container + p.firstName + ", ";
 		}
 		resultado_juego_api2 = Container.substring(1,Container.length()-2) + "]";
+		renderArgs.put("resultado_juego_api2", resultado_juego_api2);
 		render();
 	}
 	//Metodo que implementa el punto 3 del API
